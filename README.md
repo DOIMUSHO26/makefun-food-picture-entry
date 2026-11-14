@@ -37,9 +37,9 @@ photograph would not fit).
   (the bounty caps each side at 1024; the full 3:2 frame fits at 1024 wide)
 - Format: JPEG (quality 100, no chroma subsampling — the highest-fidelity
   encode that fits the size cap), held in `entry.png`
-- Size: **950,042 bytes** (cap: 1,048,576)
+- Size: **921,027 bytes** (cap: 1,048,576)
 - SHA-256 of `entry.png`, and of both test runs' `/output/entry.png`:
-  `d909016fd49505657e42f706866aae2b2a0f11737bb6beefaf6dbb52fb03a5eb`
+  `dfd73c7a841106bfc06a17533f7cf48f136c586e3b29c545e2828ce2f7c77a66`
 - Two consecutive runs of `main.py` produced outputs byte-identical to
   each other and to `entry.png` (verified with `cmp` and SHA-256).
 - Runtime: under a tenth of a second per run (limit: 60 s). No network.
@@ -65,9 +65,11 @@ second photograph (entry 2, "the lift" — a fork twirling ribbon pasta
 in tomato sauce above a dark bowl), then by a third (entry 3 — the
 same bowl as above, with a plain whole burrata), then by a fourth
 (entry 4 — the dressed burrata with oil drops and a rolled butter
-curl), which has in turn been replaced by the photograph above. The
-copy program is unchanged throughout — it serves whichever finished
-picture `entry.png` holds.
+curl), then by a fifth (entry 5 — an HD-pass version of this plate),
+which has in turn been replaced by the photograph above: the ORIGINAL
+shaved-butter photograph, which the owner chose over the HD-pass
+version. The copy program is unchanged throughout — it serves
+whichever finished picture `entry.png` holds.
 
 `preview.png` in this folder is a copy of the final entry image.
 
