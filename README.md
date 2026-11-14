@@ -1,10 +1,14 @@
 # Make the Best-Looking Food Picture — Entry
 
-**The picture:** a state-of-the-art pasta plate seen from directly
-overhead — wide ribbons of pappardelle folded through a slow-braised
-beef ragu, finished with a torn burrata spilling its cream, shaved
-parmesan, fresh basil and drops of chilli oil, with a wisp of steam
-rising, served on a dark slate board over a rustic wooden table.
+**The picture:** "the lift" — a fork raised high over a wide, dark
+rustic bowl, twirling a tall bundle of wide flat ribbon pasta glossed
+in a rich red tomato sauce. Strands trail back down to the bowl, with
+a single droplet of sauce falling from the lowest one. The bowl below
+is heaped with more of the pasta, finished with shaved parmesan,
+fresh basil leaves and beads of golden olive oil. Steam curls up
+through the frame against a dark, warm backdrop with soft golden
+bokeh lights; the light is low and warm, the focus shallow, the sauce
+glossy.
 
 ## How the entry works
 
@@ -23,8 +27,8 @@ repository holds."* This entry uses the copy design:
 One naming note: despite the `.png` suffix, `entry.png` holds a whole
 **JPEG** image. The bounty accepts "a whole PNG or JPEG", the output
 path is fixed as `/output/entry.png`, and JPEG is what fits a
-photographic 1024 × 1024 picture under the 1 MiB cap (a true PNG of
-this photograph would not fit).
+photographic picture under the 1 MiB cap (a true PNG of this
+photograph would not fit).
 
 ## Verified figures
 
@@ -32,9 +36,9 @@ this photograph would not fit).
   (the bounty caps each side at 1024; the full 3:2 frame fits at 1024 wide)
 - Format: JPEG (quality 100, no chroma subsampling — the highest-fidelity
   encode that fits the size cap), held in `entry.png`
-- Size: **999,956 bytes** (cap: 1,048,576)
+- Size: **760,364 bytes** (cap: 1,048,576)
 - SHA-256 of `entry.png`, and of both test runs' `/output/entry.png`:
-  `90d20f0fad8e9f758b3790cba512fef0f94f46d1fac6da3c9b03e4bab3b55de8`
+  `6dc9914cf580573a95a7fd51413571405cc8feb3fb46bc4f67bec9335706d0d4`
 - Two consecutive runs of `main.py` produced outputs byte-identical to
   each other and to `entry.png` (verified with `cmp` and SHA-256).
 - Runtime: under a tenth of a second per run (limit: 60 s). No network.
@@ -52,7 +56,12 @@ Writes the picture to `/output/entry.png`.
 This entry began as a program that drew its plate procedurally with
 the standard library alone. That renderer is preserved in this
 repository as `main-drawing-v2.py` for the record; it is not part of
-the submitted entry. The final entry above is the one `main.py` runs.
+the submitted entry.
+
+The first submitted picture (entry 1) was an overhead pappardelle,
+beef ragu and burrata platter on a slate board. It has been replaced
+by the photograph above for a second submission; the copy program is
+unchanged — it serves whichever finished picture `entry.png` holds.
 
 `preview.png` in this folder is a copy of the final entry image.
 
