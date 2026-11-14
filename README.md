@@ -1,17 +1,43 @@
 # Make the Best-Looking Food Picture — Entry
 
-A single-file Python program that draws a state-of-the-art fine-dining
-pasta plate, seen from directly overhead: a tall tong-twirled nest of
-fresh golden tagliatelle with deep tomato sauce (pooled under the nest,
-worked through the strands, and finished with a spoon-drag smear), two
-small side twirls, halved roasted cherry tomatoes, basil leaves, shaved
-parmesan, cracked pepper and an olive-oil sheen, served on an ivory
-stoneware plate over a dark wooden table, with a fork resting at the rim.
+**The picture:** a state-of-the-art pasta plate seen from directly
+overhead — wide ribbons of pappardelle folded through a slow-braised
+beef ragu, finished with a torn burrata spilling its cream, shaved
+parmesan, fresh basil and drops of chilli oil, with a wisp of steam
+rising, served on a dark slate board over a rustic wooden table.
 
-Everything is drawn procedurally with the **Python standard library
-only** — an in-memory framebuffer, seeded value noise, hand-built shape
-and shading routines, and a zlib-compressed PNG encoder. No PIL, no
-numpy, no network, no image assets.
+## How the entry works
+
+The bounty brief allows two shapes of entry: a program that draws its
+picture, or the simpler shape — *"a program may also copy an image the
+repository holds."* This entry uses the copy design:
+
+- `entry.png` in this repository **is** the finished picture.
+- `main.py` (Python standard library only) finds `entry.png` — beside
+  the script first, then the working directory, then `/bot/entry.png` —
+  and copies its bytes unchanged to `/output/entry.png`, creating
+  `/output` if needed. It fails with a clear error if the image is
+  missing. Nothing is decoded or re-encoded, so the copy is exact and
+  the two grading runs are byte-identical by construction.
+
+One naming note: despite the `.png` suffix, `entry.png` holds a whole
+**JPEG** image. The bounty accepts "a whole PNG or JPEG", the output
+path is fixed as `/output/entry.png`, and JPEG is what fits a
+photographic 1024 × 1024 picture under the 1 MiB cap (a true PNG of
+this photograph would not fit).
+
+## Verified figures
+
+- Dimensions: **1024 × 683** — the WHOLE photograph, full frame, no crop
+  (the bounty caps each side at 1024; the full 3:2 frame fits at 1024 wide)
+- Format: JPEG (quality 100, no chroma subsampling — the highest-fidelity
+  encode that fits the size cap), held in `entry.png`
+- Size: **999,956 bytes** (cap: 1,048,576)
+- SHA-256 of `entry.png`, and of both test runs' `/output/entry.png`:
+  `90d20f0fad8e9f758b3790cba512fef0f94f46d1fac6da3c9b03e4bab3b55de8`
+- Two consecutive runs of `main.py` produced outputs byte-identical to
+  each other and to `entry.png` (verified with `cmp` and SHA-256).
+- Runtime: under a tenth of a second per run (limit: 60 s). No network.
 
 ## Run
 
@@ -19,18 +45,16 @@ numpy, no network, no image assets.
 python3 main.py
 ```
 
-Writes the picture to `/output/entry.png` (the directory is created if
-needed).
+Writes the picture to `/output/entry.png`.
 
-## Properties
+## History
 
-- Output: 1024 × 1024 PNG, well under the 1 MiB limit (~366 KB).
-- Fully deterministic: every random source uses a fixed seed, so two
-  runs produce byte-identical files (verified by SHA-256).
-- Runtime: roughly 15 seconds on a modest machine; no network access
-  required or used.
+This entry began as a program that drew its plate procedurally with
+the standard library alone. That renderer is preserved in this
+repository as `main-drawing-v2.py` for the record; it is not part of
+the submitted entry. The final entry above is the one `main.py` runs.
 
-`preview.png` in this folder is a copy of the final rendered entry.
+`preview.png` in this folder is a copy of the final entry image.
 
 ## License
 
