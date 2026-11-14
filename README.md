@@ -3,7 +3,9 @@
 **The picture:** a deep, dark rustic ceramic bowl of wide pappardelle
 ribbons in a slow-braised beef ragù, photographed at a three-quarter
 angle on a dark wooden table. Resting on the pasta at the top right
-is ONE whole burrata ball — intact, smooth, closed and glossy.
+is ONE whole burrata ball — intact, smooth, closed and glossy —
+dressed with a small basil sprig on top, golden drops of olive oil
+on its surface, and a small butter curl resting against its side.
 Shaved parmesan, fresh basil leaves and droplets of chilli oil finish
 the dish, steam rises through the frame, and a polished gold fork
 rests in the bowl at the right, its handle on the rim. The light is
@@ -35,9 +37,9 @@ photograph would not fit).
   (the bounty caps each side at 1024; the full 3:2 frame fits at 1024 wide)
 - Format: JPEG (quality 100, no chroma subsampling — the highest-fidelity
   encode that fits the size cap), held in `entry.png`
-- Size: **930,216 bytes** (cap: 1,048,576)
+- Size: **938,941 bytes** (cap: 1,048,576)
 - SHA-256 of `entry.png`, and of both test runs' `/output/entry.png`:
-  `0989878bcaec4741119ca878ca7833e3e442734b8c0e478686493f2e50511a73`
+  `48988366a5bcccb3b75326d2433501756ec0b673addd75999ca3c0a21bd4f1b2`
 - Two consecutive runs of `main.py` produced outputs byte-identical to
   each other and to `entry.png` (verified with `cmp` and SHA-256).
 - Runtime: under a tenth of a second per run (limit: 60 s). No network.
@@ -60,9 +62,10 @@ the submitted entry.
 The first submitted picture (entry 1) was an overhead pappardelle,
 beef ragu and burrata platter on a slate board. It was replaced by a
 second photograph (entry 2, "the lift" — a fork twirling ribbon pasta
-in tomato sauce above a dark bowl), which has in turn been replaced
-by the photograph above. The copy program is unchanged throughout —
-it serves whichever finished picture `entry.png` holds.
+in tomato sauce above a dark bowl), then by a third (entry 3 — the
+same bowl as above, with a plain whole burrata), which has in turn
+been replaced by the photograph above. The copy program is unchanged
+throughout — it serves whichever finished picture `entry.png` holds.
 
 `preview.png` in this folder is a copy of the final entry image.
 
